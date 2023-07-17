@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>honey-comb</title>
+  </head>
+  <body style="background-color: #000000">
+    <div class="honeycomb-container">
+      <div class="honeycomb"></div>
+      <div class="honeycomb"></div>
+      <div class="honeycomb"></div>
+      <div class="honeycomb"></div>
+      <div class="honeycomb"></div>
+    </div>
+
+    <style>
+      .honeycomb-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+      }
+
+      .honeycomb {
+        width: 10%;
+        height: 20%;
+        background-color: #ffc107;
+        margin: 5px;
+        position: relative;
+        animation: glowing 2s infinite;
+      }
+
+      @keyframes glowing {
+        0% {
+          box-shadow: 0 0 5px #ffc107;
+        }
+        50% {
+          box-shadow: 0 0 20px #ffc107, 0 0 40px #ffc107, 0 0 60px #ffc107;
+        }
+        100% {
+          box-shadow: 0 0 5px #ffc107;
+        }
+      }
+    </style>
+  </body>
+</html>
